@@ -21,7 +21,7 @@ class Uitslag extends Model {
                 ->distinct()
                 ->select(
                     "wedstrijden.id as wedstrijd_id",
-                    DB::raw("date_format(wedstrijden.datum, '%d/%m/%Y') as datum"),
+                    DB::raw("date_format(wedstrijden.datum, '%d/%m/%Y') as display_datum"),
                     "wedstrijden.omschrijving as omschrijving",
                     "wedstrijden.datum"
                 )
